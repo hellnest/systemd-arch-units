@@ -1,0 +1,13 @@
+[Unit]
+Description=Brings Instant Messaging Services to IRC
+After=syslog.target
+
+[Service]
+EnvironmentFile=/etc/bitlbee/bitlbee.conf
+ExecStart=/usr/sbin/bitlbee -F bitlbee
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
