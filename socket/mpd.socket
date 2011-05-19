@@ -1,0 +1,9 @@
+[Unit]
+Description=Music Player Daemon
+
+[Socket]
+ListenStream=6600
+Accept=yes
+
+[Install]
+WantedBy=multi-user.target
